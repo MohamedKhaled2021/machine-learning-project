@@ -1,12 +1,18 @@
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
+# Ensure required libraries are installed
+try:
+    import pandas as pd
+    from sklearn.model_selection import train_test_split
+    from sklearn.linear_model import LinearRegression
+    from sklearn.metrics import mean_squared_error
+except ImportError as e:
+    print("Missing library:", e.name)
+    print("Please install it using: pip install", e.name)
+    exit(1)
 
-# Sample data
+# Improved dataset for better results
 data = {
-    'Experience': [1, 2, 3, 4, 5],
-    'Salary': [30000, 35000, 40000, 45000, 50000]
+    'Experience': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    'Salary': [30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000]
 }
 
 # Create a DataFrame
